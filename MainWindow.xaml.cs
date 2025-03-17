@@ -28,23 +28,23 @@ namespace Orai0317
 
         private void Beolvas(string allomany)
         {
-            //try
-            //{
-            //    using (StreamReader olvas = new(allomany))
-            //    {
-            //        olvas.ReadLine();
+            try
+            {
+                using (StreamReader olvas = new(allomany))
+                {
+                    olvas.ReadLine();
 
-            //        while (!olvas.EndOfStream)
-            //        {
-            //            petsLista.Add(new Pet(olvas.ReadLine()));
-            //        }
-            //        MessageBox.Show("Sikeres beolvasás!");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Sikertelen beolvasás " + ex.Message);
-            //}
+                    while (!olvas.EndOfStream)
+                    {
+                        petsLista.Add(new Pet(olvas.ReadLine()));
+                    }
+                    MessageBox.Show("Sikeres beolvasás!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sikertelen beolvasás " + ex.Message);
+            }
 
         }
 

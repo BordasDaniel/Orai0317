@@ -28,7 +28,7 @@
             <DatePicker x:Name="dpSzul" />
 
             <Label Content="Súly *"/>
-            <TextBox x:Name="tbxSuly" />
+            <TextBox x:Name="tbxSuly" TextChanged="tbxSuly_TextChanged" />
 
             <Label Content="Kedvenc étel"/>
             <TextBox x:Name="tbxEtel" />
