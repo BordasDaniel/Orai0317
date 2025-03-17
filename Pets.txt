@@ -1,0 +1,1 @@
+Név;Faj;Fajta;Nem;Szín;Életkor;Súly;Magasság;Kedvenc étel;Kedvenc játék
