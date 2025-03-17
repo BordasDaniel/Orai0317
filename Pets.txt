@@ -10,4 +10,3 @@ Hugó;Kutya;Tacskó;Hím;Fekete;2022.01.01;12;35;Hús;Labda
 Kormi;Kutya;Tacskó;Hím;Fekete;2023.01.01;9;30;Hús;Labda
 Liza;Macska;Sziámi;Nõstény;Fehér;2024.01.01;5;20;Hal;Egér
 Manci;Macska;Perzsa;Nõstény;Fekete;2025.01.01;7;25;Hal;Egér
-

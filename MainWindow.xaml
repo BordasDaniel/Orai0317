@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orai0317"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Kiskedvencek Szállodája" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Menu>
+            <MenuItem Header="Vendégek">
+                <MenuItem Header="Felvétel" Click="FelvetelClick"/>
+                <Separator />
+                <MenuItem Header="Kijelentkezés"/>
+            </MenuItem>
+        </Menu>
+
 
     </Grid>
+    
+    
+
 </Window>

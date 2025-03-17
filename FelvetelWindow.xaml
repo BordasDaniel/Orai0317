@@ -1,0 +1,46 @@
+﻿<Window x:Class="Orai0317.FelvetelWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Orai0317"
+        mc:Ignorable="d"
+        Title="FelvetelWindow" Height="500" Width="400">
+    <Grid>
+        <StackPanel>
+            <!--  -->
+            <Label Content="Név *"/>
+            <TextBox x:Name="tbxNev" />
+
+            <Label Content="Faj *"/>
+            <TextBox x:Name="tbxFaj" />
+
+            <Label Content="Fajta *"/>
+            <TextBox x:Name="tbxFajta" />
+
+            <Label Content="Nem: *"/>
+            <TextBox x:Name="tbxNem" />
+
+            <Label Content="Szín *"/>
+            <TextBox x:Name="tbxSzin" />
+
+            <Label Content="Születési dátum *"/>
+            <DatePicker x:Name="dpSzul" />
+
+            <Label Content="Súly *"/>
+            <TextBox x:Name="tbxSuly" />
+
+            <Label Content="Kedvenc étel"/>
+            <TextBox x:Name="tbxEtel" />
+
+            <Label Content="Játék:"/>
+            <TextBox x:Name="tbxJatek" />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Felvétel" Margin="10" Click="FelvetelClick"/>
+                <Button Content="Mégsem" Margin="10" Click="MegseClick"/>
+            </StackPanel>
+                
+        </StackPanel>
+    </Grid>
+</Window>

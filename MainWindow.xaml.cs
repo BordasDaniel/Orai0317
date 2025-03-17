@@ -17,7 +17,7 @@ namespace Orai0317
     /// </summary>
     public partial class MainWindow : Window
     {
-        static List<Pet> petsLista = new();
+        public static List<Pet> petsLista = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -28,23 +28,30 @@ namespace Orai0317
 
         private void Beolvas(string allomany)
         {
-            try
-            {
-                using (StreamReader olvas = new(allomany))
-                {
-                    olvas.ReadLine();
+            //try
+            //{
+            //    using (StreamReader olvas = new(allomany))
+            //    {
+            //        olvas.ReadLine();
 
-                    while (!olvas.EndOfStream)
-                    {
-                        petsLista.Add(new Pet(olvas.ReadLine()));
-                    }
-                    MessageBox.Show("Sikeres beolvasás!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Sikertelen beolvasás " + ex.Message);
-            }
+            //        while (!olvas.EndOfStream)
+            //        {
+            //            petsLista.Add(new Pet(olvas.ReadLine()));
+            //        }
+            //        MessageBox.Show("Sikeres beolvasás!");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Sikertelen beolvasás " + ex.Message);
+            //}
+
+        }
+
+        private void FelvetelClick(object sender, RoutedEventArgs e)
+        {
+            FelvetelWindow felvetelWindow = new();
+            felvetelWindow.ShowDialog();
         }
     }
 }
