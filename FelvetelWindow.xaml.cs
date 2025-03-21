@@ -20,9 +20,11 @@ namespace Orai0317
     /// </summary>
     public partial class FelvetelWindow : Window
     {
-        public FelvetelWindow()
+        private mainWindow mainWindow1;
+        public FelvetelWindow(mainWindow mainWindow)
         {
             InitializeComponent();
+            mainWindow1 = mainWindow;
         }
 
         private void MegseClick(object sender, RoutedEventArgs e)
@@ -62,7 +64,9 @@ namespace Orai0317
 
             Pet ujKedvenc = new(tbxNev.Text, tbxFaj.Text, tbxFajta.Text, tbxNem.Text, tbxSzin.Text, DateTime.Parse(dpSzul.Text), int.Parse(tbxSuly.Text), tbxEtel.Text, tbxJatek.Text);
 
-            MainWindow.petsLista.Add(ujKedvenc);
+            mainWindow.petsLista.Add(ujKedvenc);
+            mainWindow1.dgKedvencek.Items.Refresh();
+
             MessageBox.Show("Sikeres felvétel!");
 
         }

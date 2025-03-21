@@ -15,15 +15,30 @@ namespace Orai0317
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class mainWindow : Window
     {
         public static List<Pet> petsLista = new();
-        public MainWindow()
+        public DataGrid dgKedvencek;
+        public mainWindow()
         {
             InitializeComponent();
 
-            string allomany = "Pets.txt";
+            string allomany = "Allatok.txt";
             Beolvas(allomany);
+
+            dgKedvencek = new()
+            {
+                Name = "dgKedvencek",
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Top,
+                Margin = new Thickness(10, 10, 10, 10),
+                IsReadOnly = true,
+                ItemsSource = petsLista,
+            };
+
+            Grid.SetRow(dgKedvencek, 1);
+            stckpKijelzo.Children.Add(dgKedvencek);
+
         }
 
         private void Beolvas(string allomany)
@@ -50,8 +65,23 @@ namespace Orai0317
 
         private void FelvetelClick(object sender, RoutedEventArgs e)
         {
-            FelvetelWindow felvetelWindow = new();
+            FelvetelWindow felvetelWindow = new(this);
             felvetelWindow.ShowDialog();
+        }
+
+        private void KijelentkezesClick(object sender, RoutedEventArgs e)
+        {
+            KijelentkezesWindow kijelentkezesWindow = new(this);
+            kijelentkezesWindow.ShowDialog();
+        }
+
+        private void KilepesClick(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult eredmeny = MessageBox.Show("Biztos ki akarsz lépni?", "Kilépés", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (eredmeny == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<Window x:Class="Orai0317.MainWindow"
+﻿<Window x:Class="Orai0317.mainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -15,11 +15,15 @@
         <Menu>
             <MenuItem Header="Vendégek">
                 <MenuItem Header="Felvétel" Click="FelvetelClick"/>
+                <MenuItem Header="Kijelentkezés" Click="KijelentkezesClick"/>
                 <Separator />
-                <MenuItem Header="Kijelentkezés"/>
+                <MenuItem Header="Kilépés" Click="KilepesClick" />
             </MenuItem>
         </Menu>
 
+        <StackPanel Grid.Row="1" x:Name="stckpKijelzo">
+            <Label Content="Kiskedvencek Szállodája" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+        </StackPanel>
 
     </Grid>
     
